@@ -1,0 +1,86 @@
+@use 'sass:color';
+
+.login {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 35px 1fr 35px;
+  color: $primary-50;
+
+  &__main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    padding: 35px 0;
+    flex: 1;
+    background: $primary-10;
+  }
+
+  &__head {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 36px;
+    text-transform: uppercase;
+
+    &-title {
+      font-size: 20px;
+      line-height: 14px;
+      color: $primary;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    &-desc {
+      font-size: 15px;
+      line-height: 11px;
+    }
+  }
+
+  &-title {
+    font-size: 20px;
+    color: $primary;
+  }
+
+  &__tabs {
+    .login__tab {
+      cursor: pointer;
+    }
+    .login__tab:not(:last-child) {
+      padding-right: 17.5px;
+      border-right: 1px solid $primary-10;
+
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+
+  &__input {
+    padding: 26.25px 35px;
+    max-height: 61.5px;
+    background: $primary-5;
+    color: $primary-50;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: text;
+    &::placeholder {
+      color: $primary-25;
+      line-height: 13px;
+    }
+  }
+
+  &__tg-btn {
+    color: color-mix(in srgb, $primary, $red-50);
+  }
+}

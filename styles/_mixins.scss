@@ -1,0 +1,101 @@
+@mixin border($width, $height: 17.5px, $isBadge: false, $isReverse: false) {
+  position: relative;
+  width: $width;
+  display: block;
+  align-self: flex-end;
+  height: calc(100% - $height);
+  background: $primary-10;
+
+  &::after {
+    position: absolute;
+    top: -$height;
+    left: 0;
+    width: $height;
+    height: $height;
+    content: '';
+    background: linear-gradient(-45deg, $primary-10 50%, transparent 50%);
+  }
+
+  &:last-child {
+    align-self: flex-start;
+    transform: rotateX(180deg);
+
+    &::after {
+      background: linear-gradient(45deg, $primary-10 50%, transparent 50%);
+    }
+  }
+
+  @if $isReverse {
+    align-self: flex-start;
+    &::after {
+      top: auto;
+      bottom: -$height;
+      background: linear-gradient(-135deg, $primary-10 50%, transparent 50%);
+    }
+
+    &:last-child {
+      align-self: flex-end;
+      &::after {
+        top: auto;
+        bottom: -$height;
+        background: linear-gradient(135deg, $primary-10 50%, transparent 50%);
+      }
+    }
+  }
+
+  @if $isBadge {
+    &:last-child {
+      position: relative;
+      align-self: flex-end;
+      transform: rotateX(180deg);
+
+      &::after {
+        top: auto;
+        bottom: -$height;
+        background: linear-gradient(135deg, $primary-10 60%, transparent 40%);
+      }
+    }
+  }
+}
+
+@mixin twoBorder($width, $height: 17.5px) {
+  position: relative;
+  width: $width;
+  display: block;
+  height: calc(100% - ($height + $height));
+  background: $primary-10;
+
+  &::after {
+    position: absolute;
+    top: -$height;
+    left: 0;
+    width: $height;
+    height: $height;
+    content: '';
+    background: linear-gradient(-45deg, $primary-10 50%, transparent 50%);
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -$height;
+    left: 0;
+    width: $height;
+    height: $height;
+    content: '';
+    background: linear-gradient(-135deg, $primary-10 50%, transparent 50%);
+  }
+
+  &:last-child {
+    align-self: flex-start;
+    transform: rotateX(180deg);
+
+    &::after {
+      background: linear-gradient(45deg, $primary-10 50%, transparent 50%);
+    }
+  }
+}
+
+@mixin romb($bg) {
+  transform: rotate(45deg);
+  background: $bg;
+}

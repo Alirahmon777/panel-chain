@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.min.css" lang="css" id="link-scss" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <title>Shop Page</title>
+  </head>
+  <body>
+    <div class="body">
+      <aside class="navbar">
+        <div class="navbar__top">
+          <a class="logo" href="/">LOGO</a>
+        </div>
+        <div class="navbar__navs">
+          <nav class="navbar__nav">
+            <button class="navbar__accordion">
+              <span>OVERVIEW</span>
+              <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+            </button>
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="/" class="navbar__item-box">DASHBOARD</a>
+                <a href="/" class="navbar__item-border"></a>
+              </li>
+              <li class="navbar__item active">
+                <a class="navbar__item-box" href="/shop/">
+                  <img src="/assets/svgs/aside/arrow-right.svg" alt="arrow-right" />
+                  <p>SHOP</p>
+                </a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__item-box" href="/outils/">Outils</a>
+              </li>
+              <li class="navbar__item danger">
+                <div class="navbar__item-box">
+                  <div class="navbar__bg-striped">Mini jeux</div>
+                </div>
+              </li>
+              <li class="navbar__item danger">
+                <div class="navbar__item-box">
+                  <div class="navbar__bg-striped">Spoofer</div>
+                </div>
+                <span class="navbar__item-border"></span>
+              </li>
+            </ul>
+          </nav>
+          <nav class="navbar__nav">
+            <button class="navbar__accordion">
+              <span>MORE</span>
+              <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+            </button>
+            <ul class="navbar__more">
+              <li class="navbar__more-item w-full"><a href="/faq.html" class="w-full block">FAQ</a></li>
+              <li class="navbar__more-item w-full"><a href="/support.html" class="w-full block">Support</a></li>
+              <li class="navbar__more-item w-full"><a href="/reglement.html" class="w-full block">Réglement</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="main relative">
+        <header class="header">
+          <div class="flex items-center gap-[35px]">
+            <a class="header__page" href="/shop/">Shop</a>
+            <div class="flex gap-[17.5px] text-primary-50 text-[13px] leading-[9px]">
+              <span>/</span>
+              <a href="/shop/checkout/">Checkout</a>
+              <span>/</span>
+              <p>bulk</p>
+            </div>
+          </div>
+          <div class="header__endbox">
+            <div class="header__rank">
+              <p>Rank</p>
+              <img src="/assets/svgs/global/arrow.svg" alt="arrow-right icon" />
+              <div class="header__rank-box">
+                <span>Silver</span>
+                <img src="/assets/svgs/global/rank-silver.svg " alt="silver rank icon" />
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="header__currency cursor-pointer" id="open-search-menu">
+              <div class="header__currency-box">
+                <p>+ 15.05895</p>
+                <img src="/assets/svgs/cryptos/btc.svg" alt="btc icon" />
+              </div>
+              <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down icon" id="open-search-arrow" />
+            </div>
+            <div class="divider"></div>
+            <div class="header__profile">
+              <div class="header__profile-box">
+                <p>John Doe</p>
+                <img src="/assets/svgs/global/login-icon.svg" alt="login-icon" />
+              </div>
+              <img src="/assets/svgs/global/more.svg" alt="three dots icon" id="open-profile-menu" />
+              <img
+                src="/assets/svgs/global/btn-menu-x.svg"
+                alt="menu close icon"
+                class="hidden"
+                id="close-profile-menu"
+              />
+            </div>
+          </div>
+        </header>
+        <div class="flex justify-between items-center">
+          <ul class="flex my-[35px] items-center gap-[17.5px] text-primary-50 text-[13px] font-bold leading-[9px]">
+            <li class="">
+              <a href="/shop/checkout/">card <span class="font-orbitron text-primary ml-[17.5px]">( 7 )</span></a>
+            </li>
+            <li class="text-primary">
+              <a href="/shop/checkout/bulk.html"
+                >bulk <span class="font-orbitron text-primary ml-[17.5px]">( 3 )</span></a
+              >
+            </li>
+          </ul>
+          <p class="text-[13px] font-bold text-primary-50">
+            Total price <span class="ml-[8.75px]">.</span
+            ><span class="font-orbitron text-primary ml-[8.75px]">001</span>
+          </p>
+
+          <ul class="flex my-[35px] items-center gap-[35px] text-primary-50 text-[13px] font-bold leading-[9px]">
+            <li class="">
+              <button id="checkout-btn" class="uppercase">
+                Acheter la séléction <span class="font-orbitron text-primary ml-[17.5px]">( 7 )</span>
+              </button>
+            </li>
+
+            <li class="">
+              <button class="uppercase" id="all-filters-btn">all filters</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dashboard-card__content-effect col-span-3 !w-full !h-[70px]">
+          <div class="effect-box !p-[17.5px]"><div class="effect-template"></div></div>
+          <span class="big__border--reverse primary-2"></span>
+        </div>
+
+        <div class="flex flex-col gap-[8.75px] mt-[17.5px]">
+          <div class="px-[17.5px] grid grid__nine [&_span]:bg-primary-2 [&_span]:p-[8.75px_17.5px] gap-[8.75px]">
+            <span>
+              <label
+                for="grid-1"
+                class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+              >
+                <input type="checkbox" id="grid-1" class="" />
+                <label for="grid-1" style="--size: 14px">
+                  <svg viewBox="0,0,50,50">
+                    <path d="M5 30 L 20 45 L 45 5"></path>
+                  </svg>
+                </label>
+              </label>
+            </span>
+            <span>Bin</span>
+            <span>Level</span>
+            <span>vendeur</span>
+            <span>Pays</span>
+            <span>Base</span>
+            <span>price</span>
+            <span class="col-span-2">Action</span>
+          </div>
+          <div class="p-[17.5px] overflow-y-auto h-[640px] bg-primary-10 mt-[8.75px]">
+            <div class="grid grid__nine grid__wrapper gap-[8.75px]">
+              <span>
+                <label
+                  for="grid-2"
+                  class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                >
+                  <input type="checkbox" id="grid-2" class="" />
+                  <label for="grid-2" style="--size: 14px">
+                    <svg viewBox="0,0,50,50">
+                      <path d="M5 30 L 20 45 L 45 5"></path>
+                    </svg>
+                  </label>
+                </label>
+              </span>
+              <span class="gap-[17.5px]">
+                <div class="w-[35px] h-[22px] bg-primary-10"></div>
+                416549
+              </span>
+              <span class="gap-[17.5px]">
+                <span class="romb primary-25 block"></span>
+                Classique
+              </span>
+              <span>Vendeur name</span>
+              <span>US</span>
+              <span>Base name</span>
+              <span class="font-orbitron !text-yellow">20.00 €</span>
+              <button class="justify-center">
+                <img src="/assets/svgs/global/checkout-cart.svg" alt="checkout cart icon" />
+              </button>
+              <button class="justify-center">
+                <img src="/assets/svgs/global/cart.svg" alt="cart icon" />
+              </button>
+            </div>
+            <div class="grid grid__nine grid__wrapper gap-[8.75px]">
+              <span>
+                <label
+                  for="grid-3"
+                  class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                >
+                  <input type="checkbox" id="grid-3" class="" />
+                  <label for="grid-3" style="--size: 14px">
+                    <svg viewBox="0,0,50,50">
+                      <path d="M5 30 L 20 45 L 45 5"></path>
+                    </svg>
+                  </label>
+                </label>
+              </span>
+              <span class="gap-[17.5px]">
+                <div class="w-[35px] h-[22px] bg-primary-10"></div>
+                416549
+              </span>
+              <span class="gap-[17.5px]">
+                <span class="romb primary-25 block"></span>
+                Classique
+              </span>
+              <span>Vendeur name</span>
+              <span>US</span>
+              <span>Base name</span>
+              <span class="font-orbitron !text-yellow">20.00 €</span>
+              <button class="justify-center">
+                <img src="/assets/svgs/global/checkout-cart.svg" alt="checkout cart icon" />
+              </button>
+              <button class="justify-center">
+                <img src="/assets/svgs/global/cart.svg" alt="cart icon" />
+              </button>
+            </div>
+            <div class="grid grid__nine grid__wrapper gap-[8.75px]">
+              <span>
+                <label
+                  for="grid-4"
+                  class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                >
+                  <input type="checkbox" id="grid-4" class="" />
+                  <label for="grid-4" style="--size: 14px">
+                    <svg viewBox="0,0,50,50">
+                      <path d="M5 30 L 20 45 L 45 5"></path>
+                    </svg>
+                  </label>
+                </label>
+              </span>
+              <span class="gap-[17.5px]">
+                <div class="w-[35px] h-[22px] bg-primary-10"></div>
+                416549
+              </span>
+              <span class="gap-[17.5px]">
+                <span class="romb primary-25 block"></span>
+                Classique
+              </span>
+              <span>Vendeur name</span>
+              <span>US</span>
+              <span>Base name</span>
+              <span class="font-orbitron !text-yellow">20.00 €</span>
+              <button class="justify-center">
+                <img src="/assets/svgs/global/checkout-cart.svg" alt="checkout cart icon" />
+              </button>
+              <button class="justify-center">
+                <img src="/assets/svgs/global/cart.svg" alt="cart icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-full my-[17.5px] items-center gap-[17.5px]">
+          <span class="flex-1 h-[1px] bg-primary-10"></span>
+          <svg
+            width="6"
+            height="10"
+            viewBox="0 0 6 10"
+            fill="none"
+            class="-rotate-90"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M5.75 5L0.75 9.5L0.75 0.5L5.75 5Z" fill="#0BF1FF" fill-opacity="0." />
+          </svg>
+          <span class="flex-1 h-[1px] bg-primary-10"></span>
+        </div>
+
+        <div class="dashboard-card__content-effect col-span-3 w-[100%] h-[70px]">
+          <span class="big__border--reverse primary-2 last"></span>
+          <div class="effect-box !pr-[17.5px]"><div class="effect-template"></div></div>
+        </div>
+        <div
+          id="menu"
+          class="items-start opacity-0 left-0 pointer-events-none absolute transition-all backdrop-blur-2xl z-50 w-full h-[calc(100%-88px)] top-[88px] pr-[35px] flex justify-end"
+        >
+          <div
+            id="menu__wrapper"
+            class="relative z-[55] border border-primary-10 h-auto p-[8.75px] mt-[35px] w-[322px]"
+          >
+            <div class="grid grid-cols-[1fr_17.5px]">
+              <div class="flex flex-col gap-[35px] flex-1 bg-primary-10 p-[35px_17.5px_35px_35px]">
+                <button class="navbar__accordion uppercase w-full m-0">
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+                  <span>my account</span>
+                </button>
+                <nav class="flex flex-col gap-[35px]">
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">Admin :</p>
+                    <a href="/panel/admin.html" class="text-[13px] text-primary-50 font-bold">Panel admin</a>
+                    <span class="w-[17.5px] h-[1px] bg-primary-10"></span>
+                  </div>
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">Support :</p>
+                    <a href="/panel/support.html" class="text-[13px] text-primary-50 font-bold">Panel Support</a>
+                    <span class="w-[17.5px] h-[1px] bg-primary-10"></span>
+                  </div>
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">Seller :</p>
+                    <a href="/panel/seller/" class="text-[13px] text-primary-50 font-bold">Panel Seller</a>
+                    <span class="w-[17.5px] h-[1px] bg-primary-10"></span>
+                  </div>
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">customer :</p>
+                    <a href="/rank.html" class="text-[13px] text-primary-50 font-bold">Rank client</a>
+                    <a href="/seller.html" class="text-[13px] text-primary-50 font-bold">Become seller</a>
+                  </div>
+                </nav>
+              </div>
+              <span class="big__border--reverse"></span>
+            </div>
+            <div class="grid grid-cols-[17.5px_1fr] mt-[7px]">
+              <span class="big__border--reverse"></span>
+              <div class="flex flex-col gap-[35px] bg-primary-10 p-[35px_17.5px_35px_35px]">
+                <button class="navbar__accordion uppercase m-0 w-full">
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+                  <span>more</span>
+                </button>
+
+                <nav class="flex flex-col gap-[17.5px] items-end">
+                  <a href="/setting/" class="text-[13px] text-primary-50 font-bold leading-[9px]">user space</a>
+                  <a href="/login/" class="text-[13px] text-primary-50 font-bold leading-[9px]">disconnection</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="profile__menu"
+          class="items-start left-0 absolute transition-all backdrop-blur-2xl z-50 w-full h-[calc(100%-88px)] top-[88px] pr-[35px] flex justify-end opacity-0 pointer-events-none"
+        >
+          <div
+            id="profile__wrapper"
+            class="relative z-[55] border border-primary-10 h-auto p-[8.75px] mt-[35px] w-[322px]"
+          >
+            <div class="flex h-[50px]">
+              <span class="small__border"></span>
+              <div class="flex items-center flex-1 bg-primary-10 px-[8.75px]">
+                <img src="/assets/svgs/global/search.svg" alt="search icon" />
+                <input
+                  type="text"
+                  class="py-[17.5px] flex-1 bg-transparent placeholder:text-[13px] placeholder:text-primary-50 placeholder:font-bold placeholder:uppercase pl-[17.5px]"
+                  placeholder="Search currencies"
+                />
+              </div>
+            </div>
+            <div class="mt-[8.75px] flex flex-col gap-[35px] flex-1 bg-primary-10 p-[35px_8.5px]">
+              <ul class="flex flex-col">
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="flex mt-[8.75px] h-[62.5px]">
+              <div class="flex flex-col gap-[17.5px] flex-1 bg-primary-10 p-[17.5px] pr-[8.75px]">
+                <span class="w-full h-[1px] bg-primary-10"></span>
+                <a href="/setting/" class="text-[13px] font-bold text-primary-50 leading-[9px]">See my wallet</a>
+              </div>
+              <span class="small__border"></span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="opacity-0 pointer-events-none transition-all fixed bg-[#00000090] backdrop-blur-md w-full h-full z-[100] left-0 top-0 flex items-center justify-center"
+          id="checkout-modal"
+        >
+          <div class="overflow-y-auto grid grid-cols-[1fr_35px] w-[800px]" id="checkout-modal-wrapper">
+            <div class="flex flex-col gap-[35px] bg-primary-10 pl-[35px] py-[35.5px]">
+              <div class="flex relative items-center justify-between flex-1">
+                <div class="flex items-center gap-[17.5px]">
+                  <img src="/assets/svgs/warning.svg" alt="warning icon" />
+                  <p class="text-xl font-semibold leading-[14px]">purchase validation</p>
+                </div>
+                <button class="uppercase text-[13px] font-bold leading-[9px] text-primary-50" id="checkout-modal-close">
+                  Retours au ckeckout
+                </button>
+                <p class="dashboard-card__content-chart__bg-num !w-auto right-0 !bottom-auto -top-2 text-right">
+                  10100111011001010101101 110 00 10100111 00<br />
+                  011001010101101 10100111
+                </p>
+              </div>
+              <p class="w-[400px] text-primary-25 font-semibold text-[15px]">
+                Once you have validated your purchases, there will be no refunds possible.
+              </p>
+              <span class="h-[1px] bg-primary-10"></span>
+              <div class="flex flex-col gap-[17.5px]">
+                <button class="navbar__accordion w-full p-[26.25px_35px] uppercase dropdown-selection">
+                  <span class="">Sélectionner check ou uncheck</span>
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+                </button>
+                <ul
+                  class="bg-primary-5 hidden text-[13px] font-bold leading-[9px] py-[26.25px] px-[35px] flex-col gap-[17.5px] text-primary-50"
+                >
+                  <li><button class="uppercase" id="payment-btn-check">check</button></li>
+                  <li><button class="uppercase" id="payment-btn-uncheck">uncheck</button></li>
+                </ul>
+              </div>
+              <div class="flex-col gap-[35px] hidden" id="payment-check">
+                <p class="text-primary-25 font-semibold text-[15px] leading-[20px]">
+                  your cards will be checked automatically<br />
+                  once the purchase is validated
+                </p>
+
+                <div class="flex gap-[8.75px] items-center leading-[9px] text-primary-50 text-[13px] font-bold">
+                  <p>Prix</p>
+                  <span>.</span>
+                  <span class="font-orbitron">001</span>
+                </div>
+                <span class="h-[1px] bg-primary-10"></span>
+                <button
+                  class="![border-image-slice:10] [border-image:linear-gradient(to_right,#0bf1ff1a,transparent)_30] border-[1px] border-solid border-transparent w-full py-[16.5px] relative text-primary text-[13px] font-bold uppercase bg-primary-5"
+                >
+                  Proceed to payment
+                </button>
+              </div>
+              <div class="flex-col gap-[35px] hidden" id="payment-uncheck">
+                <p class="text-primary-25 font-semibold text-[15px] leading-[20px]">
+                  go to thetools page<br />
+                  to check your cards manually
+                </p>
+
+                <div class="flex gap-[8.75px] items-center leading-[9px] text-primary-50 text-[13px] font-bold">
+                  <p>Prix</p>
+                  <span>.</span>
+                  <span class="font-orbitron">001</span>
+                </div>
+                <span class="h-[1px] bg-primary-10"></span>
+                <button
+                  class="![border-image-slice:10] [border-image:linear-gradient(to_right,#0bf1ff1a,transparent)_30] border-[1px] border-solid border-transparent w-full py-[16.5px] relative text-primary text-[13px] font-bold uppercase bg-primary-5"
+                >
+                  Proceed to payment
+                </button>
+              </div>
+            </div>
+            <span class="large__border--reverse"></span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div
+      class="opacity-0 pointer-events-none translate-x-[400px] transition-all fixed z-50 p-[8.75px] w-full h-screen top-0 left-0 flex bg-[#00000090] justify-end"
+      id="all-filters-modal"
+    >
+      <div class="h-full w-1/2">
+        <div class="bg-primary-10 backdrop-blur-2xl h-full flex flex-col">
+          <div class="flex items-center justify-between h-[91px] p-[35px] border-b border-primary-10">
+            <p class="text-[20px] font-semibold leading-[14px]">All filters</p>
+            <button id="all-filters-close">
+              <img src="/assets/svgs/global/x-close.svg" alt="x close icon" width="30" />
+            </button>
+          </div>
+          <div class="mt-[17.5px] p-[35px] overflow-y-auto">
+            <div class="">
+              <button class="navbar__accordion w-full uppercase">
+                <span>Card info</span>
+                <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+              </button>
+              <div class="mt-[35px] pb-[70px] border-b border-primary-10">
+                <form class="flex gap-[18px]">
+                  <textarea
+                    placeholder="Entrez le bin..."
+                    id="bin-input"
+                    cols="30"
+                    rows="10"
+                    class="outils-input h-full w-auto flex-1 max-h-[225px] min-h-[215px]"
+                  ></textarea>
+                  <div class="dashboard-card__content-effect w-[70px] h-[220px]">
+                    <span class="big__border--reverse primary-2"></span>
+                    <div class="effect-box !pr-[17.5px]"><div class="effect-template"></div></div>
+                  </div>
+                  <div class="flex-1 flex-col gap-[18px] flex">
+                    <input type="text" class="outils-input py-[25px] h-[61px]" placeholder="Banque name" />
+                    <input type="text" class="outils-input py-[25px] h-[61px]" placeholder="Text block" />
+                    <input type="text" class="outils-input py-[25px] h-[61px]" placeholder="Text block" />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="mt-[70px]">
+              <button class="navbar__accordion w-full uppercase">
+                <span>range info</span>
+                <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+              </button>
+              <div class="mt-[35px] pb-[70px] border-b border-primary-10">
+                <div class="mt-[35px] flex gap-[17.5px]">
+                  <div
+                    class="flex-1 px-[35px] flex items-center justify-between text-primary-50 bg-transparent border border-solid border-primary-10 py-[25px] h-[61px]"
+                  >
+                    <p class="flex-1 w-full">Prix min :</p>
+                    <input
+                      class="font-orbitron bg-transparent w-[100px] text-right input-range min range-inputs"
+                      type="number"
+                      id="prix-min"
+                      value="8.00"
+                    />
+                    <span class="font-orbitron">€</span>
+                  </div>
+                  <div class="dashboard-card__content-effect w-[140px] h-[70px]">
+                    <span class="big__border--reverse primary-2"></span>
+                    <div class="effect-box !pr-[17.5px]"><div class="effect-template"></div></div>
+                  </div>
+                  <div
+                    class="flex-1 px-[35px] flex items-center justify-between text-primary-50 bg-transparent border border-solid border-primary-10 py-[25px] h-[61px]"
+                  >
+                    <p class="flex-1 w-full">Prix max :</p>
+                    <input
+                      class="font-orbitron bg-transparent w-[100px] text-right input-range max range-inputs"
+                      type="number"
+                      id="prix-max"
+                      value="30.00"
+                    />
+                    <span class="font-orbitron">€</span>
+                  </div>
+                </div>
+                <div class="mt-[35px]">
+                  <div class="range-slider">
+                    <span class="range-selected"></span>
+                  </div>
+                  <div class="range-input">
+                    <input type="range" class="min" min="0" max="50" value="8" step="0.5" />
+                    <input type="range" class="max last" min="0" max="50" value="30" step="0.5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-[70px]">
+              <button class="navbar__accordion w-full uppercase">
+                <span>Seller info</span>
+                <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+              </button>
+              <div class="mt-[35px] pb-[70px] border-b border-primary-10 grid grid-cols-2">
+                <div class="pl-[17.5px]">
+                  <div class="flex items-center gap-[17.5px] h-[44px]">
+                    <span>
+                      <label
+                        for="check-1"
+                        class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                      >
+                        <input type="checkbox" id="check-1" class="" />
+                        <label for="check-1" style="--size: 14px">
+                          <svg viewBox="0,0,50,50">
+                            <path d="M5 30 L 20 45 L 45 5"></path>
+                          </svg>
+                        </label>
+                      </label>
+                    </span>
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Check btn</p>
+                  </div>
+                  <div class="flex items-center gap-[17.5px] h-[44px]">
+                    <span>
+                      <label
+                        for="check-2"
+                        class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                      >
+                        <input type="checkbox" id="check-2" class="" />
+                        <label for="check-2" style="--size: 14px">
+                          <svg viewBox="0,0,50,50">
+                            <path d="M5 30 L 20 45 L 45 5"></path>
+                          </svg>
+                        </label>
+                      </label>
+                    </span>
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Check btn</p>
+                  </div>
+                  <div class="flex items-center gap-[17.5px] h-[44px]">
+                    <span>
+                      <label
+                        for="check-3"
+                        class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                      >
+                        <input type="checkbox" id="check-3" class="" />
+                        <label for="check-3" style="--size: 14px">
+                          <svg viewBox="0,0,50,50">
+                            <path d="M5 30 L 20 45 L 45 5"></path>
+                          </svg>
+                        </label>
+                      </label>
+                    </span>
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Check btn</p>
+                  </div>
+                </div>
+                <div class="pl-[17.5px]">
+                  <div class="flex items-center gap-[17.5px] h-[44px]">
+                    <span>
+                      <label
+                        for="check-2.1"
+                        class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                      >
+                        <input type="checkbox" id="check-2.1" class="" />
+                        <label for="check-2.1" style="--size: 14px">
+                          <svg viewBox="0,0,50,50">
+                            <path d="M5 30 L 20 45 L 45 5"></path>
+                          </svg>
+                        </label>
+                      </label>
+                    </span>
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Check btn</p>
+                  </div>
+                  <div class="flex items-center gap-[17.5px] h-[44px]">
+                    <span>
+                      <label
+                        for="check-2.2"
+                        class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                      >
+                        <input type="checkbox" id="check-2.2" class="" />
+                        <label for="check-2.2" style="--size: 14px">
+                          <svg viewBox="0,0,50,50">
+                            <path d="M5 30 L 20 45 L 45 5"></path>
+                          </svg>
+                        </label>
+                      </label>
+                    </span>
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Check btn</p>
+                  </div>
+                  <div class="flex items-center gap-[17.5px] h-[44px]">
+                    <span>
+                      <label
+                        for="check-2.3"
+                        class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                      >
+                        <input type="checkbox" id="check-2.3" class="" />
+                        <label for="check-2.3" style="--size: 14px">
+                          <svg viewBox="0,0,50,50">
+                            <path d="M5 30 L 20 45 L 45 5"></path>
+                          </svg>
+                        </label>
+                      </label>
+                    </span>
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Check btn</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-[70px]">
+              <button class="navbar__accordion w-full uppercase">
+                <span>other info</span>
+                <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+              </button>
+              <div class="mt-[35px] pb-[70px] border-b px-[17.5px] border-primary-10 grid grid-cols-2">
+                <div class="">
+                  <div
+                    class="w-full flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                  >
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">cvv :</p>
+                    <div class="flex items-center gap-[18px]">
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-3.1"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-3.1" class="" />
+                            <label for="check-3.1" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                      </div>
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-3.2"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-3.2" class="" />
+                            <label for="check-3.2" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                  >
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">ADDR :</p>
+                    <div class="flex items-center gap-[18px]">
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-3.3"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-3.3" class="" />
+                            <label for="check-3.3" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                      </div>
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-3.6"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-3.6" class="" />
+                            <label for="check-3.6" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                  >
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Phone :</p>
+                    <div class="flex items-center gap-[18px]">
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-3.4"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-3.4" class="" />
+                            <label for="check-3.4" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                      </div>
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-3.5"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-3.5" class="" />
+                            <label for="check-3.5" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ml-[35px]">
+                  <div
+                    class="w-full flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                  >
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">YYMM :</p>
+                    <div class="flex items-center gap-[18px]">
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-4.1"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-4.1" class="" />
+                            <label for="check-4.1" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                      </div>
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-4.2"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-4.2" class="" />
+                            <label for="check-4.2" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                  >
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Email :</p>
+                    <div class="flex items-center gap-[18px]">
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-4.3"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-4.3" class="" />
+                            <label for="check-4.3" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                      </div>
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-4.6"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-4.6" class="" />
+                            <label for="check-4.6" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                  >
+                    <p class="text-[13px] text-primary-50 font-bold leading-[9px]">Dob :</p>
+                    <div class="flex items-center gap-[18px]">
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-4.4"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-4.4" class="" />
+                            <label for="check-4.4" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                      </div>
+                      <div class="flex items-center gap-[17.5px]">
+                        <span>
+                          <label
+                            for="check-4.5"
+                            class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                          >
+                            <input type="checkbox" id="check-4.5" class="" />
+                            <label for="check-4.5" style="--size: 14px">
+                              <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                              </svg>
+                            </label>
+                          </label>
+                        </span>
+                        <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-full col-span-2 flex justify-between items-center pb-[17.5px] border-b border-primary-10 my-[17.5px]"
+                >
+                  <p class="text-[13px] text-primary-50 font-bold leading-[9px]">cvv :</p>
+                  <div class="flex items-center gap-[18px]">
+                    <div class="flex items-center gap-[17.5px]">
+                      <span>
+                        <label
+                          for="check-5.1"
+                          class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                        >
+                          <input type="checkbox" id="check-5.1" class="" />
+                          <label for="check-5.1" style="--size: 14px">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                        </label>
+                      </span>
+                      <p class="text-[13px] text-primary-50 font-bold leading-[9px]">V</p>
+                    </div>
+                    <div class="flex items-center gap-[17.5px]">
+                      <span>
+                        <label
+                          for="check-5.2"
+                          class="flex checkbox-wrapper items-center gap-[17.5px] leading-[9px] text-[13px] font-bold text-primary-50"
+                        >
+                          <input type="checkbox" id="check-5.2" class="" />
+                          <label for="check-5.2" style="--size: 14px">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                        </label>
+                      </span>
+                      <p class="text-[13px] text-primary-50 font-bold leading-[9px]">X</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 flex items-end justify-end">
+            <div
+              class="flex flex-1 text-[13px] h-[91px] font-bold text-primary-50 items-center justify-between p-[35px] border-t border-primary-10"
+            >
+              <p>Delete all</p>
+              <div class="flex gap-[17.5px]">
+                <p>to research</p>
+                <span class="font-orbitron">( 368 )</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="opacity-0 pointer-events-none transition-all fixed bg-[#00000090] backdrop-blur-md w-full h-full z-[100] left-0 top-0 flex items-center justify-center"
+      id="withdraw-modal"
+    >
+      <div class="overflow-y-auto grid grid-cols-[1fr_35px] w-[800px]" id="withdraw-modal-wrapper">
+        <div class="flex flex-col gap-[35px] bg-primary-10 pl-[35px] py-[35.5px]">
+          <div class="flex relative items-center justify-between flex-1 border-b border-primary-10 pb-[35px]">
+            <div class="flex items-center gap-[17.5px]">
+              <img src="/assets/svgs/warning.svg" alt="warning icon" />
+              <p class="text-xl font-semibold leading-[14px]">Withdraw</p>
+            </div>
+            <button id="withdraw-modal-close">
+              <img src="/assets/svgs/global/x-close.svg" alt="x close icon" width="30" />
+            </button>
+            <p class="dashboard-card__content-chart__bg-num !w-auto right-0 !bottom-auto -top-2 text-right">
+              10100111011001010101101 110 00 10100111 00<br />
+              011001010101101 10100111
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-[35px] items-center justify-center text-primary-50 text-[13px] font-bold leading-[9px]"
+          >
+            <p>Total estimated proceeds</p>
+            <p class="font-orbitron text-[66px] font-semibold leading-[48px]">0.01154137 btc</p>
+            <p class="font-orbitron text-primary-50">488.46 usd</p>
+          </div>
+          <span class="h-[1px] bg-primary-10"></span>
+          <form action="" class="flex flex-col gap-[35px]">
+            <div class="flex justify-center items-center gap-[35px]">
+              <img src="/assets/svgs/cryptos/btc.svg" alt="bitcoin " />
+              <div class="flex h-[61.5px] w-[404.5px]">
+                <span class="big__border--reverse primary-5"></span>
+                <div class="flex-1 bg-primary-5 px-[17.5px] flex items-center">
+                  <input
+                    type="text"
+                    id=""
+                    class="h-full bg-transparent outils-input px-0 flex-1"
+                    value="0.01205678 BTC"
+                    placeholder="btc"
+                  />
+                  <p class="text-primary-50 text-[13px] font-bold leading-[9px] border-l border-primary-10 pl-[35px]">
+                    Max
+                  </p>
+                </div>
+                <span class="big__border--reverse last primary-5"></span>
+              </div>
+              <div class="flex items-center gap-[17.5px]">
+                <p class="text-primary-50 text-[13px] font-bold leading-[9px]">USD</p>
+                <div class="flex flex-col gap-1">
+                  <svg
+                    width="9"
+                    height="5"
+                    viewBox="0 0 9 5"
+                    fill="none"
+                    class="rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M4.5 5L0 0L9 0L4.5 5Z" fill="#0BF1FF" fill-opacity="0.2" />
+                  </svg>
+
+                  <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 5L0 0L9 0L4.5 5Z" fill="#0BF1FF" fill-opacity="0.5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center gap-[35px] items-center font-orbitron text-[13px]">
+              <p>0.01154137 BTC</p>
+              <span class="h-[9px] w-[1px] bg-primary-10"></span>
+              <p class="text-primary-50">488.46 usd</p>
+            </div>
+            <label for="sender-input">
+              <p class="w-[400px] text-primary-25 text-[13px] font-bold leading-[9px] mb-[17.5px]">
+                Destination / Processing speed :
+              </p>
+              <input type="text" class="outils-input h-[61px]" placeholder="BTC adress" id="sender-input" />
+            </label>
+          </form>
+          <div class="flex-col gap-[35px] flex">
+            <span class="h-[1px] bg-primary-10"></span>
+            <div class="">
+              <div
+                class="pb-[35px] px-[70px] flex items-center justify-between text-primary-50 text-[13px] font-bold leading-[9px]"
+              >
+                <p>Total fee</p>
+                <p>250.57 usd</p>
+              </div>
+              <button
+                class="![border-image-slice:10] [border-image:linear-gradient(to_right,#0bf1ff1a,transparent)_30] border-[1px] border-solid border-transparent w-full py-[16.5px] relative text-primary text-[13px] font-bold uppercase bg-primary-5"
+              >
+                request a withdrawal
+              </button>
+            </div>
+          </div>
+        </div>
+        <span class="large__border--reverse"></span>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script src="/assets/js/range.js"></script>
+    <script src="/assets/js/checkout.js"></script>
+  </body>
+</html>

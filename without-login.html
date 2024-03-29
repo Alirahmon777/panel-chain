@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/style.min.css" lang="css" id="link-scss" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="body">
+      <aside class="navbar">
+        <div class="navbar__top">
+          <a class="logo" href="/">LOGO</a>
+        </div>
+        <div class="navbar__navs">
+          <nav class="navbar__nav">
+            <button class="navbar__accordion">
+              <span>OVERVIEW</span>
+              <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+            </button>
+            <ul class="navbar__list">
+              <li class="navbar__item active">
+                <a class="navbar__item-box" href="/">
+                  <img src="/assets/svgs/aside/arrow-right.svg" alt="arrow-right" />
+                  <p>DASHBOARD</p>
+                </a>
+                <span class="navbar__item-border"></span>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__item-box" href="/shop/">SHOP</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__item-box" href="/outils/">Outils</a>
+              </li>
+              <li class="navbar__item danger">
+                <div class="navbar__item-box">
+                  <div class="navbar__bg-striped">Mini jeux</div>
+                </div>
+              </li>
+              <li class="navbar__item danger">
+                <div class="navbar__item-box">
+                  <div class="navbar__bg-striped">Spoofer</div>
+                </div>
+                <span class="navbar__item-border"></span>
+              </li>
+            </ul>
+          </nav>
+          <nav class="navbar__nav">
+            <button class="navbar__accordion">
+              <span>MORE</span>
+              <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+            </button>
+            <ul class="navbar__more">
+              <li class="navbar__more-item w-full"><a href="/faq.html" class="w-full block">FAQ</a></li>
+              <li class="navbar__more-item w-full"><a href="/support.html" class="w-full block">Support</a></li>
+              <li class="navbar__more-item w-full"><a href="/reglement.html" class="w-full block">Réglement</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="main relative">
+        <header class="header">
+          <h1 class="header__page">Dashboard</h1>
+          <div class="header__endbox" id="disconnected-user">
+            <p>Connexion</p>
+            <img src="/assets/svgs/global/login-icon-disconnect.svg" alt="disconnection" />
+          </div>
+          <div class="header__endbox hidden" id="connected-user">
+            <div class="header__rank">
+              <p>Rank</p>
+              <img src="/assets/svgs/global/arrow.svg" alt="arrow-right icon" />
+              <div class="header__rank-box">
+                <span>Silver</span>
+                <img src="/assets/svgs/global/rank-silver.svg " alt="silver rank icon" />
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="header__currency cursor-pointer" id="open-search-menu">
+              <div class="header__currency-box">
+                <p>+ 15.05895</p>
+                <img src="/assets/svgs/cryptos/btc.svg" alt="btc icon" />
+              </div>
+              <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down icon" id="open-search-arrow" />
+            </div>
+            <div class="divider"></div>
+            <div class="header__profile">
+              <div class="header__profile-box">
+                <p>John Doe</p>
+                <img src="/assets/svgs/global/login-icon.svg" alt="login-icon" />
+              </div>
+              <img src="/assets/svgs/global/more.svg" alt="three dots icon" id="open-profile-menu" />
+              <img
+                src="/assets/svgs/global/btn-menu-x.svg"
+                alt="menu close icon"
+                class="hidden"
+                id="close-profile-menu"
+              />
+            </div>
+          </div>
+        </header>
+        <section class="dashboard pb-0">
+          <div class="dashboard-card flex-1">
+            <span class="dashboard-card__border"></span>
+            <div class="dashboard-card__wrapper">
+              <div class="dashboard-card__head">
+                <div class="dashboard-card__number">
+                  <span class="small__border"></span>
+                  <p>01</p>
+                  <span class="small__border"></span>
+                </div>
+                <div class="dashboard-card__block">
+                  <span>Carte</span>
+                  <img src="/assets/svgs/dashboard/element-avail.svg" alt="icon" />
+                </div>
+              </div>
+              <div class="dashboard-card__content gap-[17.5px]">
+                <div class="dashboard-card__content-left">
+                  <div class="badge">
+                    <span class="badge__border sr-only"></span>
+                    <span class="dashboard-card__content-stock badge__content">Stock / détails.</span>
+                    <span class="badge__border"></span>
+                  </div>
+                  <h2 class="dashboard-card__content-amount font-orbitron">1.358</h2>
+                  <div class="dashboard-card__content-percent">
+                    <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow" style="rotate: 180deg" />
+                    <p class="font-orbitron">10%</p>
+                    <img src="/assets/svgs/dashboard/flux-icon.svg" alt="flux icon" />
+                  </div>
+                </div>
+                <div class="dashboard-card__content-chart">
+                  <div id="donut-chart">
+                    <img src="/assets/svgs/dashboard/chart-angle.svg" alt="angle" />
+                    <img src="/assets/svgs/dashboard/chart-angle.svg" alt="angle" style="rotate: 90deg; right: 0" />
+                    <img src="/assets/svgs/dashboard/chart-angle.svg" alt="angle" style="rotate: -90deg; bottom: 0" />
+                    <img
+                      src="/assets/svgs/dashboard/chart-angle.svg"
+                      alt="angle"
+                      style="rotate: 180deg; bottom: 0; right: 0"
+                    />
+                    <div class="donut-chart__items">
+                      <img src="/assets/svgs/dashboard/yellow-chart.svg" alt="yellow chart" style="top: 0" />
+                      <img
+                        src="/assets/svgs/dashboard/primary-25-chart.svg"
+                        alt="primary chart 25 percent"
+                        style="top: 4px; right: 10px"
+                      />
+                      <img
+                        src="/assets/svgs/dashboard/primary-chart.svg"
+                        alt="primary chart"
+                        style="bottom: 55.5px; right: -0.3px; rotate: -1deg"
+                      />
+                      <img
+                        src="/assets/svgs/dashboard/yellow-25-chart.svg"
+                        alt="yellow chart 25 percent"
+                        style="bottom: 0; right: 0"
+                      />
+                    </div>
+                  </div>
+                  <div class="dashboard-card__content-chart__box">
+                    <ul class="donut-chart__info">
+                      <li class="donut-chart__item">
+                        <span class="donut-chart__romb primary-25"></span>
+                        <div class="donut-chart__datas">
+                          <p>Classique</p>
+                          <span>.</span>
+                          <p class="font-orbitron">232</p>
+                        </div>
+                      </li>
+                      <li class="donut-chart__item">
+                        <span class="donut-chart__romb primary"></span>
+                        <div class="donut-chart__datas">
+                          <p>Gold</p>
+                          <span>.</span>
+                          <p class="font-orbitron">232</p>
+                        </div>
+                      </li>
+                      <li class="donut-chart__item">
+                        <span class="donut-chart__romb yellow-25"></span>
+                        <div class="donut-chart__datas">
+                          <p>Business</p>
+                          <span>.</span>
+                          <p class="font-orbitron">232</p>
+                        </div>
+                      </li>
+                      <li class="donut-chart__item">
+                        <span class="donut-chart__romb yellow"></span>
+                        <div class="donut-chart__datas">
+                          <p>Infinite</p>
+                          <span>.</span>
+                          <p class="font-orbitron">232</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="dashboard-card__content-chart__bg-num">
+                      001010101101 00 10100111 00<br />
+                      011001010101101
+                    </p>
+                  </div>
+                </div>
+                <div class="dashboard-card__content-effect">
+                  <span class="big__border--reverse"></span>
+                  <div class="effect-box"><div class="effect-template"></div></div>
+                  <span class="big__border--reverse"></span>
+                </div>
+              </div>
+              <div class="dashboard-card__foot">
+                <div class="dashboard-card__foot-restock">
+                  <ul class="dashboard-card__foot-list">
+                    <li class="dashboard-card__foot-item">
+                      <p class="dashboard-card__foot-item__text">+<span class="font-orbitron">350</span></p>
+                      <span class="dashboard-card__foot-item__status">FRESH</span>
+                    </li>
+                    <li class="dashboard-card__foot-item">
+                      <h4 class="dashboard-card__foot-item__title">thay_2811</h4>
+                      <span class="dashboard-card__foot-item__status font-orbitron">24.08</span>
+                    </li>
+                  </ul>
+                  <ul class="dashboard-card__foot-list">
+                    <li class="dashboard-card__foot-item">
+                      <p class="dashboard-card__foot-item__text">+<span class="font-orbitron">540</span></p>
+                      <span class="dashboard-card__foot-item__status">FRESH</span>
+                    </li>
+                    <li class="dashboard-card__foot-item">
+                      <h4 class="dashboard-card__foot-item__title">#ups sms</h4>
+                      <span class="dashboard-card__foot-item__status font-orbitron">24.08</span>
+                    </li>
+                  </ul>
+                  <ul class="dashboard-card__foot-list">
+                    <li class="dashboard-card__foot-item">
+                      <p class="dashboard-card__foot-item__text">+<span class="font-orbitron">350</span></p>
+                      <span class="dashboard-card__foot-item__status">FRESH</span>
+                    </li>
+                    <li class="dashboard-card__foot-item">
+                      <h4 class="dashboard-card__foot-item__title">DE LA_ZONE</h4>
+                      <span class="dashboard-card__foot-item__status font-orbitron">24.08</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dashboard-card__foot-info gap-[17.5px]">
+                  <div class="dashboard-card__foot-head">
+                    <h4 class="dashboard-card__foot-info__title">
+                      <img src="/assets/svgs/warning.svg" alt="warning" /> Infos
+                    </h4>
+                    <p>Restock every<br />week</p>
+                  </div>
+                  <div class="w-full dashboard-card__foot-visiter">
+                    <div class="dashboard-card__foot-visiter__wrapper flex flex-col justify-between">
+                      <div class="w-full bg-primary-10 h-[1px]">
+                        <span class="w-1/2 block h-full bg-primary"></span>
+                      </div>
+                      <p class="font-bold text-start">
+                        Visiter<br />
+                        le shop
+                      </p>
+                    </div>
+                    <span class="small__border"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="dashboard-card__border"></span>
+          </div>
+          <div class="dashboard-card">
+            <span class="two__border two__border-primary-2 self-center !bg-primary-2"></span>
+            <div class="dashboard-card__wrapper !bg-primary-2 !pr-[17.5px]">
+              <div class="dashboard-card__head">
+                <div class="dashboard-card__number">
+                  <span class="small__border"></span>
+                  <p>02</p>
+                  <span class="small__border"></span>
+                </div>
+                <div class="dashboard-card__block">
+                  <span>Activité</span>
+                  <img src="/assets/svgs/dashboard/element-avail.svg" alt="icon" />
+                </div>
+              </div>
+              <div class="dashboard-card__content">
+                <div class="dashboard-card__content-left flex-grow">
+                  <div class="badge">
+                    <span class="badge__border sr-only"></span>
+                    <span class="dashboard-card__content-stock badge__content">Utilisateurs.</span>
+                    <span class="badge__border"></span>
+                  </div>
+                  <div class="flex gap-[35px] items-end relative w-full">
+                    <h2 class="dashboard-card__content-amount font-orbitron">850</h2>
+                    <div class="dashboard-card__content-percent">
+                      <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow" style="rotate: 180deg" />
+                      <p class="font-orbitron">5%</p>
+                      <img src="/assets/svgs/dashboard/flux-icon.svg" alt="flux icon" />
+                    </div>
+                    <p class="dashboard-card__content-chart__bg-num !w-auto right-0 !bottom-auto top-0 text-right">
+                      10100111011001010101101 00 10100111<br />
+                      011001010101101
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-card__annonces mt-[17.5px] flex flex-col gap-[17.5px]">
+                <div class="badge !w-[138px]">
+                  <span class="badge__border sr-only"></span>
+                  <span class="dashboard-card__content-stock badge__content relative"
+                    >avis / annonces<span class="absolute">.</span></span
+                  >
+                  <span class="badge__border"></span>
+                </div>
+                <ul class="flex gap-[17.5px]">
+                  <li class="flex flex-1 dashboard-card__annonces-items">
+                    <span class="small__border--reverse"></span>
+                    <div class="bg-primary-5 p-[17.5px_8.75px] flex-1 flex flex-col gap-[35px]">
+                      <div class="flex flex-col gap-[17.5px]">
+                        <div class="flex justify-between">
+                          <span class="dashboard-card__foot-item__status font-bold">Top qualité</span>
+                          <span class="dashboard-card__foot-item__status font-orbitron">24.08</span>
+                        </div>
+                        <p class="dashboard-card__annonces-stars">
+                          <span>*</span><span>*</span><span>*</span><span>*</span><span>*</span>
+                        </p>
+                      </div>
+                      <p class="text-primary-25 font-semibold text-[15px]">Conscient de l'import...</p>
+                    </div>
+                    <span class="small__border"></span>
+                  </li>
+                  <li class="flex flex-1 dashboard-card__annonces-items">
+                    <span class="small__border--reverse"></span>
+                    <div class="bg-primary-5 p-[17.5px_8.75px] flex-1 flex flex-col gap-[35px]">
+                      <div class="flex flex-col gap-[17.5px]">
+                        <div class="flex justify-between">
+                          <span class="dashboard-card__foot-item__status font-bold">Super service</span>
+                          <span class="dashboard-card__foot-item__status font-orbitron">24.08</span>
+                        </div>
+                        <p class="dashboard-card__annonces-stars">
+                          <span>*</span><span>*</span><span>*</span><span>*</span><span>*</span>
+                        </p>
+                      </div>
+                      <p class="text-primary-25 font-semibold text-[15px]">Conscient de l'import...</p>
+                    </div>
+                    <span class="small__border"></span>
+                  </li>
+                </ul>
+              </div>
+              <div id="news-modal-btn" class="dashboard-card__news cursor-pointer flex h-[162.1px] w-full">
+                <span class="small__border--reverse"></span>
+                <div class="bg-primary-5 p-[17.5px_17.5px_17.5px_8.75px]">
+                  <div class="dashboard-card__news-head flex items-center justify-between">
+                    <button class="uppercase flex gap-[17.5px] items-center">
+                      <img src="/assets/svgs/warning.svg" alt="warning" />
+                      <p class="font-bold text-primary-50">News</p>
+                    </button>
+
+                    <p class="font-bold text-primary-25 flex items-center gap-[8.75px]">
+                      +<span class="font-orbitron !text-primary-50">5</span>
+                    </p>
+                  </div>
+                  <div class="relative max-w-[598px]">
+                    <div class="absolute bg-black h-full shadow__background pointer-events-none select-none z-10"></div>
+                    <ul class="mt-[17.5px] flex gap-[8.75px] overflow-x-auto">
+                      <li class="flex items-stretch h-[68.5px] w-[124.75px]">
+                        <div class="p-[17.5px] pr-[35px] bg-primary-10 flex flex-col justify-between">
+                          <p class="font-semibold text-[10px] text-primary-25">5 min ago</p>
+                          <h5 class="font-bold">Subject</h5>
+                        </div>
+                        <span class="small__border"></span>
+                      </li>
+                      <li class="flex items-stretch h-[68.5px] w-[124.75px]">
+                        <div class="p-[17.5px] pr-[35px] bg-primary-10 flex flex-col justify-between">
+                          <p class="font-semibold text-[10px] text-primary-25">5 min ago</p>
+                          <h5 class="font-bold">Subject</h5>
+                        </div>
+                        <span class="small__border"></span>
+                      </li>
+                      <li class="flex items-stretch h-[68.5px] w-[124.75px]">
+                        <div class="p-[17.5px] pr-[35px] bg-primary-10 flex flex-col justify-between">
+                          <p class="font-semibold text-[10px] text-primary-25">5 min ago</p>
+                          <h5 class="font-bold">Subject</h5>
+                        </div>
+                        <span class="small__border"></span>
+                      </li>
+                      <li class="flex items-stretch h-[68.5px] w-[124.75px]">
+                        <div class="p-[17.5px] pr-[35px] bg-primary-10 flex flex-col justify-between">
+                          <p class="font-semibold text-[10px] text-primary-25">5 min ago</p>
+                          <h5 class="font-bold">Subject</h5>
+                        </div>
+                        <span class="small__border"></span>
+                      </li>
+                      <li class="flex items-stretch h-[68.5px] w-[124.75px]">
+                        <div class="p-[17.5px] pr-[35px] bg-primary-10 flex flex-col justify-between">
+                          <p class="font-semibold text-[10px] text-primary-25">5 min ago</p>
+                          <h5 class="font-bold">Subject</h5>
+                        </div>
+                        <span class="small__border"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mt-[35px] flex gap-[35px]">
+          <div class="dashboard__warning text-red-50">
+            <div class="dashboard__warning-effect">
+              <div class="dashboard__warning-head">
+                <div class="dashboard__warning-number">
+                  <span class="small__border"></span>
+                  <p class="!bg-red-5 text-red">03</p>
+                  <span class="small__border"></span>
+                </div>
+                <div class="dashboard__warning-block">
+                  <span class="leading-[21px] text-red">Rank Clients</span>
+                  <p class="text-[13px] p-[5.2px] leading-[9px]">Non connecté</p>
+                </div>
+              </div>
+              <div class="flex gap-[17.5px] mt-[17.5px]">
+                <div class="dashboard__warning-rank flex flex-1">
+                  <span class="big__border sr-only"></span>
+                  <div class="flex flex-col flex-1">
+                    <div class="dashboard__warning-rank__head">
+                      <span class="big__border--reverse"></span>
+                      <div class="dashboard__warning-rank__wrapper">
+                        <div class="flex gap-[17.5px] items-center font-bold">
+                          <p>RANK</p>
+                          <svg
+                            width="5"
+                            height="10"
+                            viewBox="0 0 5 10"
+                            class="fill-red-20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M5 4.75L0 9.25L0 0.25L5 4.75Z" />
+                          </svg>
+                          <span class="dashboard-card__foot-item__status !border-red-10 !text-red-50 font-bold"
+                            >NONE</span
+                          >
+                        </div>
+                        <div class="dashboard__warning-rank__progress">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                        <div class="flex gap-[17.5px] items-center font-bold">
+                          <p>RANK</p>
+                          <svg
+                            width="5"
+                            height="10"
+                            viewBox="0 0 5 10"
+                            class="fill-red-20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M5 4.75L0 9.25L0 0.25L5 4.75Z" />
+                          </svg>
+                          <span class="dashboard-card__foot-item__status !border-red-10 !text-red-50 font-bold"
+                            >NONE</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="h-[98px] pl-[17.5px]">
+                      <div class="bg-red-5 flex items-center justify-center h-full">
+                        <div class="flex gap-[17.5px] items-end font-bold">
+                          <p class="font-orbitron text-[25px] !text-red">0.00%</p>
+                          <span>sur</span>
+                          <p class="font-orbitron text-[25px] !text-red-25">100%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="big__border"></span>
+                </div>
+                <div class="flex items-stretch h-[78.5px]">
+                  <div class="p-[17.5px] pr-[8.75px] bg-red-5 flex flex-col justify-between max-w-[163.25px]">
+                    <span class="w-full bg-red-10 min-h-[1px]"></span>
+                    <h5 class="font-bold text-[13px] pr-[44px]">Voir ma progression</h5>
+                  </div>
+                  <span class="small__border"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard__warning text-red-50 max-w-[501px]">
+            <div class="dashboard__warning-effect">
+              <div class="dashboard__warning-head">
+                <div class="dashboard__warning-number">
+                  <span class="small__border"></span>
+                  <p class="!bg-red-5 text-red">04</p>
+                  <span class="small__border"></span>
+                </div>
+                <div class="dashboard__warning-block">
+                  <span class="leading-[21px] text-red">Mini jeux</span>
+                  <p class="text-[13px] p-[5.2px] leading-[9px]">Bientôt disponible</p>
+                </div>
+              </div>
+              <ul class="mt-[17.5px] flex gap-[8.75px] w-full flex-wrap dashboard__warning-list">
+                <li class="flex items-stretch h-[78.5px]">
+                  <div class="p-[17.5px] pr-[8.75px] bg-red-5 flex flex-col justify-between max-w-[145.25px]">
+                    <span class="w-full bg-red-10 min-h-[1px]"></span>
+                    <h5 class="font-bold text-[13px] pr-[44px]">Découvrir le casino</h5>
+                  </div>
+                  <span class="small__border"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div
+          id="menu"
+          class="items-start opacity-0 left-0 pointer-events-none absolute transition-all backdrop-blur-2xl z-50 w-full h-[calc(100%-88px)] top-[88px] pr-[35px] flex justify-end"
+        >
+          <div
+            id="menu__wrapper"
+            class="relative z-[55] border border-primary-10 h-auto p-[8.75px] mt-[35px] w-[322px]"
+          >
+            <div class="grid grid-cols-[1fr_17.5px]">
+              <div class="flex flex-col gap-[35px] flex-1 bg-primary-10 p-[35px_17.5px_35px_35px]">
+                <button class="navbar__accordion uppercase w-full m-0">
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+                  <span>my account</span>
+                </button>
+                <nav class="flex flex-col gap-[35px]">
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">Admin :</p>
+                    <a href="/panel/admin.html" class="text-[13px] text-primary-50 font-bold">Panel admin</a>
+                    <span class="w-[17.5px] h-[1px] bg-primary-10"></span>
+                  </div>
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">Support :</p>
+                    <a href="/panel/support.html" class="text-[13px] text-primary-50 font-bold">Panel Support</a>
+                    <span class="w-[17.5px] h-[1px] bg-primary-10"></span>
+                  </div>
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">Seller :</p>
+                    <a href="/panel/seller/" class="text-[13px] text-primary-50 font-bold">Panel Seller</a>
+                    <span class="w-[17.5px] h-[1px] bg-primary-10"></span>
+                  </div>
+                  <div class="flex flex-col gap-[17.5px] items-end justify-end">
+                    <p class="text-[10px] font-semibold text-primary-25 leading-[7px]">customer :</p>
+                    <a href="/rank.html" class="text-[13px] text-primary-50 font-bold">Rank client</a>
+                    <a href="/seller.html" class="text-[13px] text-primary-50 font-bold">Become seller</a>
+                  </div>
+                </nav>
+              </div>
+              <span class="big__border--reverse"></span>
+            </div>
+            <div class="grid grid-cols-[17.5px_1fr] mt-[7px]">
+              <span class="big__border--reverse"></span>
+              <div class="flex flex-col gap-[35px] bg-primary-10 p-[35px_17.5px_35px_35px]">
+                <button class="navbar__accordion uppercase m-0 w-full">
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow-down" />
+                  <span>more</span>
+                </button>
+
+                <nav class="flex flex-col gap-[17.5px] items-end">
+                  <a href="/setting/" class="text-[13px] text-primary-50 font-bold leading-[9px]">user space</a>
+                  <a href="/login/" class="text-[13px] text-primary-50 font-bold leading-[9px]">disconnection</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="profile__menu"
+          class="items-start left-0 absolute transition-all backdrop-blur-2xl z-50 w-full h-[calc(100%-88px)] top-[88px] pr-[35px] flex justify-end opacity-0 pointer-events-none"
+        >
+          <div
+            id="profile__wrapper"
+            class="relative z-[55] border border-primary-10 h-auto p-[8.75px] mt-[35px] w-[322px]"
+          >
+            <div class="flex h-[50px]">
+              <span class="small__border"></span>
+              <div class="flex items-center flex-1 bg-primary-10 px-[8.75px]">
+                <img src="/assets/svgs/global/search.svg" alt="search icon" />
+                <input
+                  type="text"
+                  class="py-[17.5px] flex-1 bg-transparent placeholder:text-[13px] placeholder:text-primary-50 placeholder:font-bold placeholder:uppercase pl-[17.5px]"
+                  placeholder="Search currencies"
+                />
+              </div>
+            </div>
+            <div class="mt-[8.75px] flex flex-col gap-[35px] flex-1 bg-primary-10 p-[35px_8.5px]">
+              <ul class="flex flex-col">
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+                <li
+                  class="flex items-center gap-[17.5px] px-[26.25px] py-[8.75px] font-bold text-[13px] hover:bg-primary-5 transition-all text-primary-50"
+                >
+                  <span class="font-orbitron text-primary-50">0.00</span>
+                  <div class="flex items-center gap-[8.75px] flex-1 justify-end">
+                    <img src="/assets/svgs/global/bitcoin.svg" alt="bitcoin icon" />
+                    <p>BTC</p>
+                  </div>
+                  <button class="p-[8.5px] bg-primary-5 withdraw-modal-open">
+                    <img src="/assets/svgs/global/send.svg" alt="send icon" />
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="flex mt-[8.75px] h-[62.5px]">
+              <div class="flex flex-col gap-[17.5px] flex-1 bg-primary-10 p-[17.5px] pr-[8.75px]">
+                <span class="w-full h-[1px] bg-primary-10"></span>
+                <a href="/setting/" class="text-[13px] font-bold text-primary-50 leading-[9px]">See my wallet</a>
+              </div>
+              <span class="small__border"></span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div
+      class="opacity-0 transition-all pointer-events-none fixed bg-black z-[120] top-0 left-0 min-w-full min-h-full h-full overflow-y-auto"
+      id="news-modal"
+    >
+      <div class="w-full h-full flex flex-col">
+        <div class="flex flex-1 max-h-[191px]">
+          <span class="large__border--reverse"></span>
+          <div class="flex-1 pt-[35px] pb-[70px] bg-primary-10">
+            <div class="flex justify-between relative">
+              <div class="flex gap-[17.5px] items-center">
+                <img src="/assets/svgs/warning.svg" alt="warning icon" />
+                <p class="text-[20px] font-semibold leading-[14px]">NEWS</p>
+              </div>
+              <button id="news-modal-close">
+                <img src="/assets/svgs/global/x-close.svg" alt="x close icon" width="30" />
+              </button>
+              <p class="dashboard-card__content-chart__bg-num !w-auto right-0 !bottom-auto top-0 text-right">
+                10100111011001010101101 110 00 10100111 00<br />
+                011001010101101 10100111
+              </p>
+            </div>
+            <p class="w-[400px] text-[15px] font-semibold text-primary-25 mt-[35px]">
+              Once you have validated your purchases, there will be no refunds possible.
+            </p>
+          </div>
+          <span class="large__border--reverse"></span>
+        </div>
+        <div class="ml-[35px] px-[35px] pb-[17.5px] flex-1 bg-primary-10 flex gap-[35px]">
+          <div class="dashboard-card__content-effect col-span-3 w-[15%] h-full">
+            <div class="effect-box !pl-[17.5px]"><div class="effect-template"></div></div>
+            <span class="big__border--reverse primary-2 last"></span>
+          </div>
+          <div class="flex-1 relative">
+            <div class="flex w-full mb-[17.5px] items-center gap-[17.5px]">
+              <span class="flex-1 h-[1px] bg-primary-10"></span>
+              <svg
+                width="6"
+                height="10"
+                viewBox="0 0 6 10"
+                fill="none"
+                class="rotate-90"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M5.75 5L0.75 9.5L0.75 0.5L5.75 5Z" fill="#0BF1FF" fill-opacity="0." />
+              </svg>
+              <span class="flex-1 h-[1px] bg-primary-10"></span>
+            </div>
+            <ul
+              class="flex pt-[17.5px] pb-[35px] items-center gap-[17.5px] text-primary-50 text-[13px] font-bold leading-[9px]"
+            >
+              <li class="">
+                <a href="">week 1</a>
+              </li>
+              <li class="">
+                <a href="">week 2</a>
+              </li>
+              <li class="">
+                <a href="">week 3</a>
+              </li>
+              <li class="">
+                <a href="">week 4</a>
+              </li>
+            </ul>
+            <div class="dashboard-card__content-effect w-[100%] h-[70px]">
+              <span class="big__border--reverse primary-2"></span>
+              <div class="effect-box"><div class="effect-template"></div></div>
+              <span class="big__border primary-2 last"></span>
+            </div>
+            <div class="mt-[35px] p-[35px] bg-primary-5">
+              <div class="overflow-y-auto h-[518px] flex flex-col gap-[17.5px]">
+                <div class="flex items-center gap-[8.75px]">
+                  <p class="text-primary-25 font-semibold text-[10px]">Today</p>
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow down" />
+                </div>
+                <div class="grid grid-cols-[8.75px_1fr_8.75px]">
+                  <span class="small__border primary-5"></span>
+                  <div class="px-[8.75px] py-[17.5px] bg-primary-5">
+                    <div class="flex border-b pb-[17.5px] border-primary-10 items-center justify-between">
+                      <h3 class="text-xl font-semibold">Subject</h3>
+                      <span
+                        class="font-orbitron text-[13px] font-bold border text-primary-50 border-primary-10 leading-[9px] p-[6px]"
+                        >24.08</span
+                      >
+                    </div>
+                    <div class="grid grid-cols-[70px_1fr] gap-[35px]">
+                      <div class="dashboard-card__content-effect w-[70px] h-full">
+                        <div class="effect-box !p-[17.5px]"><div class="effect-template"></div></div>
+                      </div>
+                      <p class="py-[35px] text-[15px] font-semibold text-primary-25">
+                        Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis
+                        lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse
+                        firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero
+                        obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse,
+                        non iudicium clamans.<br /><br />
+
+                        Sed si ille hac tam eximia fortuna propter utilitatem rei publicae frui non properat, ut omnia
+                        illa conficiat, quid ego, senator, facere debeo, quem, etiamsi ille aliud vellet, rei publicae
+                        consulere oporteret?.<br /><br />
+
+                        Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego
+                        idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem
+                        pertinerent.
+                      </p>
+                    </div>
+                  </div>
+                  <span class="small__border primary-5 last"></span>
+                </div>
+                <div class="grid grid-cols-[8.75px_1fr_8.75px]">
+                  <span class="small__border primary-5"></span>
+                  <div class="px-[8.75px] py-[17.5px] bg-primary-5">
+                    <div class="flex border-b pb-[17.5px] border-primary-10 items-center justify-between">
+                      <h3 class="text-xl font-semibold">Subject</h3>
+                      <span
+                        class="font-orbitron text-[13px] font-bold border text-primary-50 border-primary-10 leading-[9px] p-[6px]"
+                        >24.08</span
+                      >
+                    </div>
+                    <div class="grid grid-cols-[70px_1fr] gap-[35px]">
+                      <div class="dashboard-card__content-effect w-[70px] h-full">
+                        <div class="effect-box !p-[17.5px]"><div class="effect-template"></div></div>
+                      </div>
+                      <p class="py-[35px] text-[15px] font-semibold text-primary-25">
+                        Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis
+                        lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse
+                        firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero
+                        obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse,
+                        non iudicium clamans.<br /><br />
+
+                        Sed si ille hac tam eximia fortuna propter utilitatem rei publicae frui non properat, ut omnia
+                        illa conficiat, quid ego, senator, facere debeo, quem, etiamsi ille aliud vellet, rei publicae
+                        consulere oporteret?.<br /><br />
+
+                        Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego
+                        idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem
+                        pertinerent.
+                      </p>
+                    </div>
+                  </div>
+                  <span class="small__border primary-5 last"></span>
+                </div>
+
+                <div class="flex items-center gap-[8.75px]">
+                  <p class="text-primary-25 font-semibold text-[10px]">Today</p>
+                  <img src="/assets/svgs/aside/arrow-down.svg" alt="arrow down" />
+                </div>
+                <div class="grid grid-cols-[8.75px_1fr_8.75px]">
+                  <span class="small__border primary-5"></span>
+                  <div class="px-[8.75px] py-[17.5px] bg-primary-5">
+                    <div class="flex border-b pb-[17.5px] border-primary-10 items-center justify-between">
+                      <h3 class="text-xl font-semibold">Subject</h3>
+                      <span
+                        class="font-orbitron text-[13px] font-bold border text-primary-50 border-primary-10 leading-[9px] p-[6px]"
+                        >24.08</span
+                      >
+                    </div>
+                    <div class="grid grid-cols-[70px_1fr] gap-[35px]">
+                      <div class="dashboard-card__content-effect w-[70px] h-full">
+                        <div class="effect-box !p-[17.5px]"><div class="effect-template"></div></div>
+                      </div>
+                      <p class="py-[35px] text-[15px] font-semibold text-primary-25">
+                        Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis
+                        lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse
+                        firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero
+                        obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse,
+                        non iudicium clamans.<br /><br />
+
+                        Sed si ille hac tam eximia fortuna propter utilitatem rei publicae frui non properat, ut omnia
+                        illa conficiat, quid ego, senator, facere debeo, quem, etiamsi ille aliud vellet, rei publicae
+                        consulere oporteret?.<br /><br />
+
+                        Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego
+                        idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem
+                        pertinerent.
+                      </p>
+                    </div>
+                  </div>
+                  <span class="small__border primary-5 last"></span>
+                </div>
+                <div class="grid grid-cols-[8.75px_1fr_8.75px]">
+                  <span class="small__border primary-5"></span>
+                  <div class="px-[8.75px] py-[17.5px] bg-primary-5">
+                    <div class="flex border-b pb-[17.5px] border-primary-10 items-center justify-between">
+                      <h3 class="text-xl font-semibold">Subject</h3>
+                      <span
+                        class="font-orbitron text-[13px] font-bold border text-primary-50 border-primary-10 leading-[9px] p-[6px]"
+                        >24.08</span
+                      >
+                    </div>
+                    <div class="grid grid-cols-[70px_1fr] gap-[35px]">
+                      <div class="dashboard-card__content-effect w-[70px] h-full">
+                        <div class="effect-box !p-[17.5px]"><div class="effect-template"></div></div>
+                      </div>
+                      <p class="py-[35px] text-[15px] font-semibold text-primary-25">
+                        Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis
+                        lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse
+                        firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero
+                        obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse,
+                        non iudicium clamans.<br /><br />
+
+                        Sed si ille hac tam eximia fortuna propter utilitatem rei publicae frui non properat, ut omnia
+                        illa conficiat, quid ego, senator, facere debeo, quem, etiamsi ille aliud vellet, rei publicae
+                        consulere oporteret?.<br /><br />
+
+                        Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego
+                        idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem
+                        pertinerent.
+                      </p>
+                    </div>
+                  </div>
+                  <span class="small__border primary-5 last"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card__content-effect col-span-3 w-[15%] h-full">
+            <span class="big__border primary-2"></span>
+            <div class="effect-box !pr-[17.5px]"><div class="effect-template"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="opacity-0 pointer-events-none transition-all fixed bg-[#00000090] backdrop-blur-md w-full h-full z-[100] left-0 top-0 flex items-center justify-center"
+      id="withdraw-modal"
+    >
+      <div class="overflow-y-auto grid grid-cols-[1fr_35px] w-[800px]" id="withdraw-modal-wrapper">
+        <div class="flex flex-col gap-[35px] bg-primary-10 pl-[35px] py-[35.5px]">
+          <div class="flex relative items-center justify-between flex-1 border-b border-primary-10 pb-[35px]">
+            <div class="flex items-center gap-[17.5px]">
+              <img src="/assets/svgs/warning.svg" alt="warning icon" />
+              <p class="text-xl font-semibold leading-[14px]">Withdraw</p>
+            </div>
+            <button id="withdraw-modal-close">
+              <img src="/assets/svgs/global/x-close.svg" alt="x close icon" width="30" />
+            </button>
+            <p class="dashboard-card__content-chart__bg-num !w-auto right-0 !bottom-auto -top-2 text-right">
+              10100111011001010101101 110 00 10100111 00<br />
+              011001010101101 10100111
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-[35px] items-center justify-center text-primary-50 text-[13px] font-bold leading-[9px]"
+          >
+            <p>Total estimated proceeds</p>
+            <p class="font-orbitron text-[66px] font-semibold leading-[48px]">0.01154137 btc</p>
+            <p class="font-orbitron text-primary-50">488.46 usd</p>
+          </div>
+          <span class="h-[1px] bg-primary-10"></span>
+          <form action="" class="flex flex-col gap-[35px]">
+            <div class="flex justify-center items-center gap-[35px]">
+              <img src="/assets/svgs/cryptos/btc.svg" alt="bitcoin " />
+              <div class="flex h-[61.5px] w-[404.5px]">
+                <span class="big__border--reverse primary-5"></span>
+                <div class="flex-1 bg-primary-5 px-[17.5px] flex items-center">
+                  <input
+                    type="text"
+                    id=""
+                    class="h-full bg-transparent outils-input px-0 flex-1"
+                    value="0.01205678 BTC"
+                    placeholder="btc"
+                  />
+                  <p class="text-primary-50 text-[13px] font-bold leading-[9px] border-l border-primary-10 pl-[35px]">
+                    Max
+                  </p>
+                </div>
+                <span class="big__border--reverse last primary-5"></span>
+              </div>
+              <div class="flex items-center gap-[17.5px]">
+                <p class="text-primary-50 text-[13px] font-bold leading-[9px]">USD</p>
+                <div class="flex flex-col gap-1">
+                  <svg
+                    width="9"
+                    height="5"
+                    viewBox="0 0 9 5"
+                    fill="none"
+                    class="rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M4.5 5L0 0L9 0L4.5 5Z" fill="#0BF1FF" fill-opacity="0.2" />
+                  </svg>
+
+                  <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 5L0 0L9 0L4.5 5Z" fill="#0BF1FF" fill-opacity="0.5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center gap-[35px] items-center font-orbitron text-[13px]">
+              <p>0.01154137 BTC</p>
+              <span class="h-[9px] w-[1px] bg-primary-10"></span>
+              <p class="text-primary-50">488.46 usd</p>
+            </div>
+            <label for="sender-input">
+              <p class="w-[400px] text-primary-25 text-[13px] font-bold leading-[9px] mb-[17.5px]">
+                Destination / Processing speed :
+              </p>
+              <input type="text" class="outils-input h-[61px]" placeholder="BTC adress" id="sender-input" />
+            </label>
+          </form>
+          <div class="flex-col gap-[35px] flex">
+            <span class="h-[1px] bg-primary-10"></span>
+            <div class="">
+              <div
+                class="pb-[35px] px-[70px] flex items-center justify-between text-primary-50 text-[13px] font-bold leading-[9px]"
+              >
+                <p>Total fee</p>
+                <p>250.57 usd</p>
+              </div>
+              <button
+                class="![border-image-slice:10] [border-image:linear-gradient(to_right,#0bf1ff1a,transparent)_30] border-[1px] border-solid border-transparent w-full py-[16.5px] relative text-primary text-[13px] font-bold uppercase bg-primary-5"
+              >
+                request a withdrawal
+              </button>
+            </div>
+          </div>
+        </div>
+        <span class="large__border--reverse"></span>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
